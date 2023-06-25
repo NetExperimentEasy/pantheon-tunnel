@@ -9,7 +9,8 @@ AC_CONFIG_HEADERS([config.h])
 
 # Add picky CXXFLAGS
 CXX11_FLAGS="-std=c++11 -pthread"
-PICKY_CXXFLAGS="-pedantic -Wall -Wextra -Weffc++ -Werror"
+# https://blog.csdn.net/llm_hao/article/details/124279032
+PICKY_CXXFLAGS="-pedantic -Wall -Wextra -Weffc++ -Werror -Wno-error=stringop-truncation"
 AC_SUBST([CXX11_FLAGS])
 AC_SUBST([PICKY_CXXFLAGS])
 
